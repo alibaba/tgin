@@ -16,14 +16,14 @@
     - `wnd3_alpha_01_theta_09_tri_num_10`: triangles data with <nobr aria-hidden="true">α</nobr>=0.1 and <nobr aria-hidden="true">θ</nobr>=0.9;
 - `triangle_data/`: processed triangles data of the public datasets.
 - `script/`: implementations of TGIN.
-- `triangle_mapreduce.zip`: mapreduce implementations of triangle extraction and selection. 
+- `triangle_mapreduce.zip`: MapReduce implementations of triangle extraction and selection. 
 
 ## Prepare data
 
 #### 1. interaction data
 We have processed the raw data and upload it to the `electronics/` fold. You can use it directly.
 
-Also, you can get the data from amazon website and process it using the script:
+Also, you can get the data from the amazon website and process it using the script:
 
 ```
 sh prepare_data.sh
@@ -37,21 +37,21 @@ python script/gen_wnd_edges.py
 ```
 
 #### 3. triangle extraction and selection
-We have extracted and seleted the triangles of both amazon(books) and amazon(electronics) datasets. You can <a href="https://pan.baidu.com/s/1DVlwa5r3JiTPgWR7Q7Sojg" target="_blank">download</a> (pwd:tgin) and put it into the `triangle_data/` folder.
+We have extracted and selected the triangles of both amazon(books) and amazon(electronics) datasets. You can <a href="https://drive.google.com/drive/folders/1gj7aHFjRLVPwmhvK-o1waJKj3Xme7GVM" target="_blank">download</a> and put it into the `triangle_data/` folder.
 
-Next, the triangle indexes should be transformed into the input format of TGIN model.
+Next, the triangle indexes should be transformed into the input format of the TGIN model.
 ```
 python process_tridata.py
 ```
 
-Also, you can refer to the mapreduce source code in 
+Also, you can refer to the MapReduce source code in 
 `triangle_mapreduce.zip` folder to generate triangle indexes.
 
 
 
 ## Train Model
 
-##### (Recommended) You can skip all the previous steps and run TGIN model using the script directly.
+##### (Recommended) You can skip all the previous steps and run the TGIN model using the script directly.
 
 ```
 
@@ -70,3 +70,4 @@ The code has been tested running under Python 2.7.18, with the following package
 - numpy == 1.16.6
 - keras == 2.0.8
 - tensorflow-gpu == 1.5.0
+### 
